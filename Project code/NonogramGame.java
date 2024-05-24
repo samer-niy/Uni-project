@@ -52,9 +52,7 @@ public class NonogramGame extends JFrame {
     }
 
     public static void main(String[] args) { // Main method that runs the application
-        EventQueue.invokeLater(() -> { 
             NonogramGame frame = new NonogramGame(); // Creates an instance of NonogramGame
             frame.setVisible(true); // Makes the JFrame visible
-        });
+        };
     }
-}
