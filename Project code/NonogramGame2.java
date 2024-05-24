@@ -3,22 +3,18 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-public class NonogramGame extends JFrame{
+public class NonogramGame extends JFrame {
     private final int gridSize = 5;  // Grid size for a 5x5 nonogram
     private JPanel[][] panels;
     private Color GrayColor = new Color(240, 240, 240);  // Light gray for unknown
 
     // Constructor for the NonogramGame class 
     public NonogramGame() {
-        this.setTitle("NonogramGame");
-        this.setSize(500, 500); 
-        this.setLayout(new GridLayout(gridSize, gridSize)); // Grid layout for 5x5
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Exits program when window is closed
-        this.initializeGrid(); // It initialises the grid
-        this.setVisible(true); // Makes the JFrame visible
+        setTitle("NonogramGame");
+        setSize(500, 500); 
+        setLayout(new GridLayout(gridSize, gridSize)); // Grid layout for 5x5
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Exits program when window is closed
+        initializeGrid(); // It initialises the grid
     }
 
     private void initializeGrid() { // It initialises the grid
@@ -57,5 +53,6 @@ public class NonogramGame extends JFrame{
 
     public static void main(String[] args) { // Main method that runs the application
             NonogramGame frame = new NonogramGame(); // Creates an instance of NonogramGame
+            frame.setVisible(true); // Makes the JFrame visible
         };
     }
